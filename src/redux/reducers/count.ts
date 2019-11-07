@@ -1,10 +1,15 @@
 import { COUNT } from '../../constants/ActionTypes'
+import { produce } from 'immer'
 
-export default function count(state = 2, action: any) {
+const INIT_COUNT = 0
+
+const count = produce((draft = INIT_COUNT, action: any) => {
   switch (action.type) {
     case COUNT.ADD_COUNT:
-      return state + action.count
+      return draft + 1
     default:
-      return state
+      return draft
   }
-}
+})
+
+export default count
