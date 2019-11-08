@@ -1576,6 +1576,14 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native@*":
+  version "0.60.22"
+  resolved "https://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.60.22.tgz#ba199a441cb0612514244ffb1d0fe6f04c878575"
+  integrity sha1-uhmaRBywYSUUJE/7HQ/m8EyHhXU=
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
 "@types/react-redux@^7.1.5":
   version "7.1.5"
   resolved "https://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-7.1.5.tgz#c7a528d538969250347aa53c52241051cf886bd3"
@@ -1620,6 +1628,15 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
+
+"@types/styled-components@^4.1.22":
+  version "4.1.22"
+  resolved "https://registry.npm.taobao.org/@types/styled-components/download/@types/styled-components-4.1.22.tgz#5b221c8a2e996ebd5c005734b9d86d1659367f50"
+  integrity sha1-WyIcii6Zbr1cAFc0udhtFlk2f1A=
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    csstype "^2.2.0"
 
 "@types/yargs-parser@*":
   version "13.1.0"
@@ -10601,7 +10618,7 @@ style-loader@1.0.0:
 
 styled-components@^4.4.1:
   version "4.4.1"
-  resolved "https://registry.npm.taobao.org/styled-components/download/styled-components-4.4.1.tgz#e0631e889f01db67df4de576fedaca463f05c2f2"
+  resolved "https://registry.npm.taobao.org/styled-components/download/styled-components-4.4.1.tgz?cache=0&sync_timestamp=1572991363897&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstyled-components%2Fdownload%2Fstyled-components-4.4.1.tgz#e0631e889f01db67df4de576fedaca463f05c2f2"
   integrity sha1-4GMeiJ8B22ffTeV2/trKRj8FwvI=
   dependencies:
     "@babel/helper-module-imports" "^7.0.0"
