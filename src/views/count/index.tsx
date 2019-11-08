@@ -2,6 +2,15 @@ import React, { useState, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { addCount } from '../../redux/actions/count'
 import { useHistory } from 'react-router-dom'
+import styled from 'styled-components'
+
+const CountWrapper = styled.div`
+  width: 600px;
+  height: 600px;
+  border: 2px solid red;
+  background-color: whitesmoke;
+  box-shadow: 20px;
+`
 
 const Count: React.FC = () => {
   const [count, setCount] = useState<number>(0)
@@ -22,13 +31,13 @@ const Count: React.FC = () => {
   }
 
   return (
-    <div>
+    <CountWrapper>
       {count}
       {countX}
       <button onClick={handleClick}>ADD</button>
       <button onClick={reduxAdd}>Redux ADD</button>
       <button onClick={jump}>jump</button>
-    </div>
+    </CountWrapper>
   )
 }
 
