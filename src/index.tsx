@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import './index.css'
-import App from './views/App'
 import * as serviceWorker from './serviceWorker'
 import configureStore from './redux/store'
+import AppRouter from './routes'
 
 const store = configureStore({})
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppRouter />
   </Provider>,
   document.getElementById('root')
 )

@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addCount } from '../redux/actions/count'
+import { addCount } from '../../redux/actions/count'
+import { useHistory } from 'react-router-dom'
 
 const Count: React.FC = () => {
   const [count, setCount] = useState<number>(0)
@@ -14,12 +15,19 @@ const Count: React.FC = () => {
 
   const reduxAdd = useCallback(() => dispatch(addCount(100)), [dispatch])
 
+  const history = useHistory()
+
+  const jump = () => {
+    history.push('/')
+  }
+
   return (
     <div>
       {count}
       {countX}
       <button onClick={handleClick}>ADD</button>
       <button onClick={reduxAdd}>Redux ADD</button>
+      <button onClick={jump}>jump</button>
     </div>
   )
 }
