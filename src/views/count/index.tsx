@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addCount } from '../../redux/actions/count'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
-
+import useSWR from 'swr'
+import { fetchPoke } from '../../api/demo'
 const CountWrapper = styled.div`
   width: 600px;
   height: 600px;
@@ -24,6 +25,9 @@ const Count: React.FC = () => {
 
   const reduxAdd = useCallback(() => dispatch(addCount(100)), [dispatch])
 
+  const { data, error } = useSWR('pokemon/ditto/', fetchPoke)
+  console.log(data, error)
+
   const history = useHistory()
 
   const jump = () => {
@@ -37,6 +41,7 @@ const Count: React.FC = () => {
       <button onClick={handleClick}>ADD</button>
       <button onClick={reduxAdd}>Redux ADD</button>
       <button onClick={jump}>jump</button>
+      {/* <button onClick={testRequst}>request</button> */}
     </CountWrapper>
   )
 }
